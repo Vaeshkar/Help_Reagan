@@ -1,0 +1,67 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['help_reagan.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        ('assets/background.png', 'assets'),
+        ('assets/ground.png', 'assets'),
+        ('assets/help_reagan_startscreen.jpg', 'assets'),
+        ('assets/endscreen.jpg', 'assets'),
+        ('assets/press_space.png', 'assets'),
+        ('assets/Reagan_run_1.png', 'assets'),
+        ('assets/Reagan_run_2.png', 'assets'),
+        ('assets/Reagan_run_3.png', 'assets'),
+        ('assets/Reagan_jump_1.png', 'assets'),
+        ('assets/Reagan_jump_2.png', 'assets'),
+        ('assets/Reagan_jump_3.png', 'assets'),
+        ('assets/cactus_1.png', 'assets'),
+        ('assets/cactus_2.png', 'assets'),
+        ('assets/cactus_3.png', 'assets'),
+        ('assets/cactus_4.png', 'assets'),
+        ('assets/cactus_5.png', 'assets'),
+        ('assets/cactus_6.png', 'assets'),
+        ('sounds/background_sound.wav', 'sounds'),
+        ('sounds/jump.wav', 'sounds'),
+        ('sounds/hitHurt.wav', 'sounds'),
+        ('sounds/endgame_sound.wav', 'sounds'),
+        ('sounds/walk.wav', 'sounds'),
+    ],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='help_reagan',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)
+app = BUNDLE(
+    exe,
+    name='help_reagan.app',
+    icon=None,
+    bundle_identifier=None,
+)

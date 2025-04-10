@@ -1,0 +1,3 @@
+([('help_reagan',
+   '/Users/leeuwen/Desktop/help_reagan_game/dist/help_reagan',
+   'EXECUTABLE')],)
